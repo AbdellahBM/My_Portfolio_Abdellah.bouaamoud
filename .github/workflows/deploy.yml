@@ -27,6 +27,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: Set GitHub Pages environment variable
+        run: echo "GITHUB_PAGES=true" >> $GITHUB_ENV
       - name: Build with Next.js
         run: npm run build
       - name: Upload artifact
